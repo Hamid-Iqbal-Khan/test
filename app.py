@@ -15,6 +15,6 @@ def hello():
    # Render the page
    return "Hello Python!"
 
-if __name__ == '__main__':
-   # Run the app server on localhost:4449
-   app.run('localhost', 8000)
+if __name__ == "__main__":
+    from waitress import serve
+    serve(app, host="0.0.0.0", port=8000)
